@@ -32,6 +32,23 @@ public class Instruction {
         this.q = q;
     }
 
+    /**
+     * @return the start state of this instruction
+     */
+    public int getStartState(){
+        return p;
+    }
+
+    /**
+     * @return the start symbol(the symbol to be changed)
+     */
+    public char getStartSymbol(){
+        return a;
+    }
+
+    /**
+     * @return a string of the form '(p, a, b, m, q)'
+     */
     public String toString(){
         String ret = "(" + p + ", " + a + ", " + b + ", ";
         switch (m) {
