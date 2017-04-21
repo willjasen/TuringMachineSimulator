@@ -9,8 +9,8 @@ import org.junit.Test;
  */
 public class InstructionTest {
     @Test
-    public void testToString() {
+    public void oString() {
         Instruction instr = new Instruction(2, 'a', 'b', Instruction.Direction.R, 3);
-        assertEquals("2, a -> b, R, 3", instr.toString());
+        assertEquals("(2, a, b, R, 3)", instr.toString());
     }
 }

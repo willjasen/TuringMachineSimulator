@@ -1,6 +1,9 @@
 package main;
 
 /**
+ * An Instruction instance acts as an element of the transition
+ * function of a Turing Machine.
+ *
  * Created by Pep on 4/20/2017.
  */
 public class Instruction {
@@ -30,14 +33,14 @@ public class Instruction {
     }
 
     public String toString(){
-        String ret = p + ", " + a + " -> " + b + ", ";
+        String ret = "(" + p + ", " + a + ", " + b + ", ";
         switch (m) {
             case L: ret += "L, ";
             break;
             case R: ret += "R, ";
             break;
         }
-        ret += q;
+        ret += q + ")";
         return ret;
      }
 }
