@@ -7,12 +7,11 @@ package main;
  * Created by Pep on 4/20/2017.
  */
 public class Instruction {
-
-    private int p;
-    private char a;
-    private char b;
-    private Direction m;
-    private int q;
+    int p;
+    char a;
+    char b;
+    Direction m;
+    int q;
 
     public enum Direction {L, R}
 
@@ -30,20 +29,6 @@ public class Instruction {
         this.b = b;
         this.m = m;
         this.q = q;
-    }
-
-    /**
-     * @return the start state of this instruction
-     */
-    public int getStartState(){
-        return p;
-    }
-
-    /**
-     * @return the start symbol(the symbol to be changed)
-     */
-    public char getStartSymbol(){
-        return a;
     }
 
     /**
