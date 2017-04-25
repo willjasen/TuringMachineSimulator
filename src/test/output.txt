@@ -1,0 +1,285 @@
+Below is the output printed by running TuringMachineTest. 
+
+Note that ID's are printed in the form 'uspsav', where 'u' and 'v' are strings in the tape alphabet 
+with 'uav' being the contents of the tape, 'a' is the current symbol of the read/write head, 'p' is 
+the current state, and 's' is the spacer character.
+
+In the output below, I chose "-" to be the blank symbol, and "|" to be the spacer character.
+
+===== INSTRUCTIONS =====
+(0, B, B, R, 0)
+(7, -, 1, R, 7)
+(2, a, a, R, 2)
+(3, b, b, L, 6)
+(0, b, B, R, 2)
+(5, B, B, L, 5)
+(2, b, b, R, 2)
+(4, b, B, L, 5)
+(6, B, b, L, 6)
+(3, B, B, R, 3)
+(4, a, a, L, 6)
+(4, A, A, R, 4)
+(2, -, -, L, 6)
+(3, a, A, L, 5)
+(0, -, -, L, 7)
+(5, a, a, L, 5)
+(6, b, b, L, 6)
+(5, b, b, L, 5)
+(4, c, c, L, 6)
+(6, c, c, L, 6)
+(1, a, a, R, 1)
+(6, A, a, L, 6)
+(7, b, b, L, 7)
+(4, B, B, R, 4)
+(7, B, b, L, 7)
+(4, -, -, L, 6)
+(2, c, c, R, 4)
+(3, c, c, L, 6)
+(3, A, A, R, 3)
+(7, a, a, L, 7)
+(0, c, c, R, 0)
+(5, -, -, R, 0)
+(6, a, a, L, 6)
+(0, A, A, R, 0)
+(1, -, -, L, 6)
+(1, b, b, R, 1)
+(7, A, a, L, 7)
+(5, c, c, L, 5)
+(0, a, A, R, 1)
+(1, c, c, R, 3)
+(3, -, -, L, 6)
+(7, c, c, L, 7)
+(6, -, 0, R, 6)
+(5, A, A, L, 5)
+
+|0|abacaba
+A|1|bacaba
+Ab|1|acaba
+Aba|1|caba
+Abac|3|aba
+Aba|5|cAba
+Ab|5|acAba
+A|5|bacAba
+|5|AbacAba
+|5|-AbacAba
+-|0|AbacAba
+-A|0|bacAba
+-AB|2|acAba
+-ABa|2|cAba
+-ABac|4|Aba
+-ABacA|4|ba
+-ABac|5|ABa
+-ABa|5|cABa
+-AB|5|acABa
+-A|5|BacABa
+-|5|ABacABa
+|5|-ABacABa
+-|0|ABacABa
+-A|0|BacABa
+-AB|0|acABa
+-ABA|1|cABa
+-ABAc|3|ABa
+-ABAcA|3|Ba
+-ABAcAB|3|a
+-ABAcA|5|BA
+-ABAc|5|ABA
+-ABA|5|cABA
+-AB|5|AcABA
+-A|5|BAcABA
+-|5|ABAcABA
+|5|-ABAcABA
+-|0|ABAcABA
+-A|0|BAcABA
+-AB|0|AcABA
+-ABA|0|cABA
+-ABAc|0|ABA
+-ABAcA|0|BA
+-ABAcAB|0|A
+-ABAcABA|0|-
+-ABAcAB|7|A-
+-ABAcA|7|Ba-
+-ABAc|7|Aba-
+-ABA|7|caba-
+-AB|7|Acaba-
+-A|7|Bacaba-
+-|7|Abacaba-
+|7|-abacaba-
+1|7|abacaba-
+|7|1abacaba-
+
+|0|aca
+A|1|ca
+Ac|3|a
+A|5|cA
+|5|AcA
+|5|-AcA
+-|0|AcA
+-A|0|cA
+-Ac|0|A
+-AcA|0|-
+-Ac|7|A-
+-A|7|ca-
+-|7|Aca-
+|7|-aca-
+1|7|aca-
+|7|1aca-
+
+|0|abab
+A|1|bab
+Ab|1|ab
+Aba|1|b
+Abab|1|-
+Aba|6|b-
+Ab|6|ab-
+A|6|bab-
+|6|Abab-
+|6|-abab-
+0|6|abab-
+|6|0abab-
+
+|0|bbbacbb
+B|2|bbacbb
+Bb|2|bacbb
+Bbb|2|acbb
+Bbba|2|cbb
+Bbbac|4|bb
+Bbba|5|cBb
+Bbb|5|acBb
+Bb|5|bacBb
+B|5|bbacBb
+|5|BbbacBb
+|5|-BbbacBb
+-|0|BbbacBb
+-B|0|bbacBb
+-BB|2|bacBb
+-BBb|2|acBb
+-BBba|2|cBb
+-BBbac|4|Bb
+-BBbacB|4|b
+-BBbac|5|BB
+-BBba|5|cBB
+-BBb|5|acBB
+-BB|5|bacBB
+-B|5|BbacBB
+-|5|BBbacBB
+|5|-BBbacBB
+-|0|BBbacBB
+-B|0|BbacBB
+-BB|0|bacBB
+-BBB|2|acBB
+-BBBa|2|cBB
+-BBBac|4|BB
+-BBBacB|4|B
+-BBBacBB|4|-
+-BBBacB|6|B-
+-BBBac|6|Bb-
+-BBBa|6|cbb-
+-BBB|6|acbb-
+-BB|6|Bacbb-
+-B|6|Bbacbb-
+-|6|Bbbacbb-
+|6|-bbbacbb-
+0|6|bbbacbb-
+|6|0bbbacbb-
+
+|0|abcaba
+A|1|bcaba
+Ab|1|caba
+Abc|3|aba
+Ab|5|cAba
+A|5|bcAba
+|5|AbcAba
+|5|-AbcAba
+-|0|AbcAba
+-A|0|bcAba
+-AB|2|cAba
+-ABc|4|Aba
+-ABcA|4|ba
+-ABc|5|ABa
+-AB|5|cABa
+-A|5|BcABa
+-|5|ABcABa
+|5|-ABcABa
+-|0|ABcABa
+-A|0|BcABa
+-AB|0|cABa
+-ABc|0|ABa
+-ABcA|0|Ba
+-ABcAB|0|a
+-ABcABA|1|-
+-ABcAB|6|A-
+-ABcA|6|Ba-
+-ABc|6|Aba-
+-AB|6|caba-
+-A|6|Bcaba-
+-|6|Abcaba-
+|6|-abcaba-
+0|6|abcaba-
+|6|0abcaba-
+
+|0|abacabb
+A|1|bacabb
+Ab|1|acabb
+Aba|1|cabb
+Abac|3|abb
+Aba|5|cAbb
+Ab|5|acAbb
+A|5|bacAbb
+|5|AbacAbb
+|5|-AbacAbb
+-|0|AbacAbb
+-A|0|bacAbb
+-AB|2|acAbb
+-ABa|2|cAbb
+-ABac|4|Abb
+-ABacA|4|bb
+-ABac|5|ABb
+-ABa|5|cABb
+-AB|5|acABb
+-A|5|BacABb
+-|5|ABacABb
+|5|-ABacABb
+-|0|ABacABb
+-A|0|BacABb
+-AB|0|acABb
+-ABA|1|cABb
+-ABAc|3|ABb
+-ABAcA|3|Bb
+-ABAcAB|3|b
+-ABAcA|6|Bb
+-ABAc|6|Abb
+-ABA|6|cabb
+-AB|6|Acabb
+-A|6|Bacabb
+-|6|Abacabb
+|6|-abacabb
+0|6|abacabb
+|6|0abacabb
+
+|0|abacacaba
+A|1|bacacaba
+Ab|1|acacaba
+Aba|1|cacaba
+Abac|3|acaba
+Aba|5|cAcaba
+Ab|5|acAcaba
+A|5|bacAcaba
+|5|AbacAcaba
+|5|-AbacAcaba
+-|0|AbacAcaba
+-A|0|bacAcaba
+-AB|2|acAcaba
+-ABa|2|cAcaba
+-ABac|4|Acaba
+-ABacA|4|caba
+-ABac|6|Acaba
+-ABa|6|cacaba
+-AB|6|acacaba
+-A|6|Bacacaba
+-|6|Abacacaba
+|6|-abacacaba
+0|6|abacacaba
+|6|0abacacaba
+
+
+Process finished with exit code 0

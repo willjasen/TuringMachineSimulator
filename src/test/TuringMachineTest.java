@@ -11,11 +11,11 @@ import static org.junit.Assert.*;
 
 /**
  * Tests TuringMachine on the machine from homework 9
- * 
+ *
  * Created by Pep on 4/24/2017.
  */
 public class TuringMachineTest {
-    private TuringMachine tm = getH9TuringMachine();
+    static private TuringMachine tm = getH9TuringMachine();
 
     @Test
     public void testAccept1(){
@@ -62,7 +62,7 @@ public class TuringMachineTest {
     /**
      * @return the Turing Machine used for homework 9 question B4
      */
-    private TuringMachine getH9TuringMachine(){
+    static private TuringMachine getH9TuringMachine(){
         char blank = '-';
         Instruction.Direction r = Instruction.Direction.R;
         Instruction.Direction l = Instruction.Direction.L;
@@ -112,6 +112,18 @@ public class TuringMachineTest {
         trans.add(new Instruction(7, 'B', 'b', l, 7));
         trans.add(new Instruction(7, blank, '1', r, 7));
 
+        outputInstructions(trans);
         return new TuringMachine(8, trans, blank, '|');
+    }
+
+    /**
+     * Prints the instructions of given transition function
+     */
+    static private void outputInstructions(Set<Instruction> trans){
+        System.out.println("===== INSTRUCTIONS =====");
+        for (Instruction instr: trans){
+            System.out.println(instr);
+        }
+        System.out.println();
     }
 }

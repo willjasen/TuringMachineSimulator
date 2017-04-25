@@ -35,9 +35,9 @@ public class TuringMachine {
     }
 
     /**
-     * Computes the input string. Outputs each instantaneous description in the form 'uspsv', where 'u' and 'v' are
-     * strings in the tape alphabet with 'uv' being the contents of the tape, 'p' is the current state, and 's'
-     * is the spacer character
+     * Computes the input string. Outputs each instantaneous description in the form 'uspsav', where 'u' and 'v' are
+     * strings in the tape alphabet with 'uav' being the contents of the tape, 'a' is the current symbol of the
+     * read/write head, 'p' is the current state, and 's' is the spacer character
      *
      * @param w the input string
      * @return the ID (in String form) computed by this TM on the input string
@@ -51,6 +51,7 @@ public class TuringMachine {
             System.out.println(id);
             nextInstr = getInstruction(id);
         }
+        System.out.println();
         return id.contents.toString();
     }
 
