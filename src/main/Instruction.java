@@ -37,12 +37,8 @@ public class Instruction {
     public String toString(){
         String ret = "(" + p + ", " + a + ", " + b + ", ";
         switch (m) {
-            case L: ret += "L, ";
-            break;
-            case R: ret += "R, ";
-            break;
+            case L: return ret + "L, " + q + ")";
+            case R: return ret + "R, " + q + ")";
         }
-        ret += q + ")";
-        return ret;
      }
 }
